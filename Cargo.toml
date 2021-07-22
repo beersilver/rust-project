@@ -1,8 +1,19 @@
 [package]
-name = "rust-project"
-version = "0.1.0"
-edition = "2018"
+name = "chamkho"
+version = "0.3.1"
+authors = ["Vee Satayamas <5ssgdxltv@relay.firefox.com>"]
+description = "Lao/Thai word segmentation/breaking library and command line"
+documentation = "https://github.com/veer66/chamkho/blob/master/README.md"
+homepage = "https://github.com/veer66/chamkho"
+repository = "https://github.com/veer66/chamkho"
+readme = "README.md"
+keywords = ["text", "nlp", "lao", "thai", "library"]
+license = "LGPL-3.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "wordcut"
+path = "src/cli.rs"
 
 [dependencies]
+clap = { version = "1", features = ["yaml"] }
+wordcut-engine = "0.1.1"
